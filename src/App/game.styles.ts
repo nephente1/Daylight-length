@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 
-interface CardsWrapperType {
-    whoWins?: boolean;
-}
+
 export const App = styled('div')`
     padding: 25px;
     display: flex;
@@ -10,7 +8,18 @@ export const App = styled('div')`
     height: 100%;
 `;
   
-  
+export const Box = styled('div')`
+    background: #3e3150;
+    padding: 25px 35px 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: #E5E8F6;
+    width: 900px;
+    height: auto;
+    box-shadow: 0px 0px 20px 12px rgba(12,27,38,0.85);
+    position: relative;
+`;
+
 export const MainText = styled('h1')`
     font-size: 26px;
     letter-spacing: 1px;
@@ -29,23 +38,10 @@ export const Button = styled('button')`
     font-size: 18px;
 `;
 
-export const NamesBox = styled('div')`
-    background: #3e3150;
-    padding: 25px 35px 30px;
-    text-align: center;
-    border-radius: 5px;
-    color: #E5E8F6;
-    width: 800px;
-    height: auto;
-    box-shadow: 0px 0px 20px 12px rgba(12,27,38,0.85);
-    position: relative;
-`;
-
-
-export const CardsWrapper = styled ('div')<CardsWrapperType>`
-    border: 2px solid ${props => props.whoWins ? 'red' : 'none'};
-    padding: 20px;
+export const CardsWrapper = styled ('div')`;
+    padding: 5px 12px;
     width: 260px;
+    margin: auto;
 `;
 
 export const TitleText = styled('h2')`
@@ -65,7 +61,11 @@ export const ResultsWrapper = styled('div')`
     margin: 15px 0;
 `;
 
-export const TextInHeader = styled('p')`
-    margin-bottom: 5px;
-    padding: 6px;
+export const DayPickerWrapper = styled('div')`
+    display: flex;
+    background: #dbd8da;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
 `;

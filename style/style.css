@@ -52,23 +52,3 @@ body {
     transform: rotate(360deg);
   }
 }
-
-/*** slider ***/
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.main {
-  background-color: #000;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-
-/* DayPicker styles */
-
-/* 

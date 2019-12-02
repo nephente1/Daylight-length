@@ -48,7 +48,7 @@ const BeltWrapper = styled('div')`
 const BeltSunrise = styled('div')<PropsType>`
     height: 40px;
     width: ${props => props.sunriseNumber}%;
-    background: blue;
+    background: black;
     &:after{
         content:'0:00';
         display: block;
@@ -64,8 +64,8 @@ const BeltLonging = styled('div')<PropsType>`
 `
 
 interface ResponseItemType {
-    sunrise: string | any,
-    dayLength: string | any
+    sunrise: string,
+    dayLength: string
 }
 
 @observer
@@ -87,6 +87,7 @@ class Cards extends React.Component<ResponseItemType> {
 
     return (
         <CardsWrapper>
+            <TitleText>{name}</TitleText>
             <DataBelt>
                 <MiddleBelt />
                 <BeltWrapper>
@@ -101,5 +102,3 @@ class Cards extends React.Component<ResponseItemType> {
 }
 
 export default Cards;
-
-//260/ 860 * 100
