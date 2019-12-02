@@ -22,4 +22,3 @@ git config user.email "email@example.com"
 Confirm that you have set the email address correctly in Git:
 git config user.email
 email@example.com --># The Day Length
-# TheComparisionGame
