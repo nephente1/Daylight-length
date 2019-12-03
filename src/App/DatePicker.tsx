@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
-import TheGame from './TheGame';
-
 import DayPicker from 'react-day-picker';
 import moment from "moment";
-
-import { DayPickerWrapper, MainText } from './game.styles';
+import MainElements from './MainElements';
+import { DayPickerWrapper, MainText, Box } from './app.styles';
+import CustomElement from './CustomElement';
 
 @observer
 class DatePicker extends React.Component {
@@ -17,7 +16,6 @@ class DatePicker extends React.Component {
     }
   
     render() {
-        
         const datePick = () => {
             return moment(this.selectedDay).format('YYYY-MM-DD')
         }
@@ -28,7 +26,10 @@ class DatePicker extends React.Component {
             <DayPickerWrapper>
                 <DayPicker onDayClick={this.handleDayClick} />
             </DayPickerWrapper>
-            <TheGame datePick={datePick()}/>
+            <Box>
+                <MainElements datePick={datePick()}/>
+                <CustomElement datePick={datePick()}/>
+            </Box>
         </>
       );
     }
