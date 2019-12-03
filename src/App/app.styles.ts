@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 
-
 export const App = styled('div')`
     padding: 25px;
     display: flex;
@@ -36,6 +35,9 @@ export const Button = styled('button')`
     cursor: pointer;
     border-radius: 4px;
     font-size: 18px;
+    &:hover{
+        background: #bc8f07;
+    }
 `;
 
 export const CardsWrapper = styled ('div')`;
@@ -69,3 +71,63 @@ export const DayPickerWrapper = styled('div')`
     justify-content: center;
     padding: 0 15px;
 `;
+
+interface CardPropsType {
+    sunriseNumber?: string,
+    longingNumber?: string
+}
+export const DataBelt = styled('div')`
+    height: 60px;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    &:after{
+        content:'24:00';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+        &:before {
+        content:'12:00';
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -20px;
+    }
+`;
+export const MiddleBelt = styled('div')`
+    width: 1px;
+    background: #f00;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+`
+export const BeltWrapper = styled('div')`
+    display: flex;
+    background: black;
+    height: 40px;
+    width: 100%;
+    padding-bottom: 10px;
+`
+export const BeltSunrise = styled('div')<CardPropsType>`
+    height: 40px;
+    width: ${props => props.sunriseNumber}%;
+    background: black;
+    &:after{
+        content:'0:00';
+        display: block;
+        position: absolute;
+        left:0;
+        bottom: 0;
+    }
+`
+export const BeltLonging = styled('div')<CardPropsType>`
+    height: 40px;
+    width: ${props => props.longingNumber}%;
+    background: yellow;
+`
