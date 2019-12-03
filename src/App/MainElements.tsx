@@ -22,9 +22,9 @@ interface DateItemType {
 @observer
 class MainElements extends React.Component<any, ResultsPropsType> {
     @observable datePick: string | null = moment().format('YYYY-MM-DD');
-    @observable results1: any = {};
-    @observable results2: any = {};
-    @observable results3: any = {};
+    @observable results1: any = null;
+    @observable results2: any = null;
+    @observable results3: any = null;
     @observable isLoading: boolean | undefined = true;
     @observable table: Array<Object> = [];
     
