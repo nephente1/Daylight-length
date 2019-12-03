@@ -16,7 +16,7 @@ interface CustomElementPropsType {
 @observer
 class CustomElement extends React.Component<CustomElementPropsType, ResultsPropsType> {
     @observable datePick: string | null = moment().format('YYYY-MM-DD');
-    @observable resultsCustom: any = null;
+    @observable resultsCustom: any = {};
     @observable table: Array<Object> = [];
     @observable customLat: number | string = 0;
     @observable customLon: number | string = 0;
