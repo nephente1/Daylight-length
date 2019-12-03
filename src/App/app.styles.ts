@@ -47,14 +47,14 @@ export const CardsWrapper = styled ('div')`;
 `;
 
 export const TitleText = styled('h2')`
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 16px;
     margin-bottom: 12px;
     letter-spacing: 1px;
     color: #d5d5d5;
-    text-transform: capitalize;
     cursor: pointer;
     color: #d5d5d5;
+    font-weight: 400;
 `;
 
 export const ResultsWrapper = styled('div')`

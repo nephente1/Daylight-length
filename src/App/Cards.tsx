@@ -23,6 +23,7 @@ const Cards = ( {sunrise, dayLength}: ResponseItemType) => {
     return (
         <CardsWrapper>
             <TitleText>{name}</TitleText>
+            <TitleText>Daylight is {longDay}% of 24h</TitleText>
             <DataBelt>
                 <MiddleBelt />
                 <BeltWrapper>
