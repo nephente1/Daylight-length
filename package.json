@@ -20,7 +20,7 @@
     "react-dom": "^16.9.0",
     "typescript": "^3.6.3",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "@types/react-datepicker": "^2.9.5",
